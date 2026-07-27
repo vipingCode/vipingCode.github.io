@@ -1,0 +1,50 @@
+[
+	{
+		"id": "0x01.A",
+		"code": "0x01.A",
+		"date": "MAY 18, 2024 · FIN_OPS",
+		"category": "FIN_OPS",
+		"title": "Optimizing FinOps in Elastic Cloud Clusters",
+		"summary": "Analyzing the thermodynamic constraints of cost allocation in multi-tenant environments.",
+		"imageUrl": "",
+		"readTime": "6 MIN READ",
+		"tags": ["Azure", "FinOps", "Kubernetes", "Cost Allocation"],
+		"externalUrl": "https://medium.com/@vipingupta/optimizing-finops-in-elastic-cloud-clusters",
+		"accentGlow": "rgba(255, 255, 255, 0.15)",
+		"accentColor": "#ffffff",
+		"accentBorder": "hover:border-zinc-400 dark:hover:border-zinc-500",
+		"locked": false
+	},
+	{
+		"id": "0x02.B",
+		"code": "0x01.B",
+		"date": "APRIL 24, 2024 · DATA_SHARD",
+		"category": "DATA_SHARD",
+		"title": "High-Frequency Data Sharding Strategies",
+		"summary": "Deconstructing the latency overhead of transactional persistence in global distributed nodes.",
+		"imageUrl": "",
+		"readTime": "8 MIN READ",
+		"tags": ["Distributed Systems", "Sharding", "SQL Server", "Azure Fabric"],
+		"externalUrl": "https://dev.to/vipingupta/high-frequency-data-sharding-strategies",
+		"accentGlow": "rgba(255, 255, 255, 0.15)",
+		"accentColor": "#ffffff",
+		"accentBorder": "hover:border-zinc-400 dark:hover:border-zinc-500",
+		"locked": false
+	},
+	{
+		"id": "0x03.C",
+		"code": "0x01.C",
+		"date": "JUNE 12, 2024 · AI_FINOPS",
+		"category": "AI_FINOPS",
+		"title": "Autonomous AI Agents for Cloud FinOps Governance",
+		"summary": "Deploying self-healing LLM agents to monitor Azure resource topology in real-time.",
+		"imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+		"readTime": "5 MIN READ",
+		"tags": ["AI Models", "Autonomous Agents", "FinOps", "Azure"],
+		"externalUrl": "",
+		"accentGlow": "rgba(255, 255, 255, 0.08)",
+		"accentColor": "#888888",
+		"accentBorder": "border-zinc-800/60",
+		"locked": true
+	}
+]

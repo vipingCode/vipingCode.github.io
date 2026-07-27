@@ -1,0 +1,182 @@
+{
+	"projects": [
+		{
+			"id": "cyber-core-mesh",
+			"sector": "INFRASTRUCTURE",
+			"title": "CYBER_CORE_MESH",
+			"description": "Decentralized cloud compute mesh designed for financial transaction isolation with sub-millisecond settlement at scale.",
+			"imageUrl": "",
+			"latLong": "LAT: 47.6062 N · LONG: 122.3321 W",
+			"tags": ["AZURE_K8S", "RUST_LANG", "TERRAFORM", "FINOPS_CORE"],
+			"glitchLabel": "PROJECT_CORE",
+			"metrics": [
+				{ "label": "Settlement Latency", "value": "< 0.12ms" },
+				{ "label": "Isolation Standard", "value": "ISO-27001" },
+				{ "label": "Node Capacity", "value": "18,500" }
+			],
+			"blueprintDetails": {
+				"architecture": "Azure Fabric Mesh + Custom Rust Control Plane",
+				"throughput": "1,200,000 tx/sec",
+				"nodes": "18,500 active compute pods",
+				"cloudProvider": "Microsoft Azure (US-West-2 / EU-West)",
+				"costReduction": "18.4% compute cost efficiency"
+			}
+		},
+		{
+			"id": "fin-stream-08",
+			"sector": "DATA_ENG",
+			"title": "FIN_STREAM_08",
+			"description": "Real-time telemetry engine for global cloud spending utilizing high-frequency event ingestion to predict budget overflows.",
+			"imageUrl": "",
+			"latLong": "LAT: 37.7749 N · LONG: 122.4194 W",
+			"tags": ["PYTHON_DATA", "SQL_SERVER", "POWER_BI", "EVENT_HUBS"],
+			"glitchLabel": "DATA_NODE",
+			"metrics": [
+				{ "label": "Event Ingestion", "value": "4.8M events/sec" },
+				{ "label": "Anomaly Accuracy", "value": "99.8%" },
+				{ "label": "Monthly Savings", "value": "$1.42M USD" }
+			],
+			"blueprintDetails": {
+				"architecture": "Event-Driven Microservices + Azure Event Hubs + PowerBI Embed",
+				"throughput": "4,800,000 telemetry packets/sec",
+				"nodes": "64 Sharded SQL Server Instances",
+				"cloudProvider": "Azure Hybrid Cloud / PowerBI Embedded",
+				"costReduction": "$1,420,500 monthly budget recovery"
+			}
+		},
+		{
+			"id": "hyperscale-cost-governor",
+			"sector": "AGENTIC_AI",
+			"title": "HYPERSCALE_COST_GOVERNOR",
+			"description": "Autonomous LLM agent topology manager rightsizing compute pods, eliminating orphaned resources, and stabilizing cost jitter.",
+			"imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+			"latLong": "LAT: 51.5074 N · LONG: 0.1278 W",
+			"tags": ["GENAI_SDK", "AZURE_FUNCTIONS", "AGENTIC_FINOPS", "TYPESCRIPT"],
+			"glitchLabel": "AI_GOVERNOR",
+			"metrics": [
+				{ "label": "Pod Rightsizing", "value": "Automated 24/7" },
+				{ "label": "Cost Jitter Volatility", "value": "-34.2%" },
+				{ "label": "Self-Healing Nodes", "value": "2,400+" }
+			],
+			"blueprintDetails": {
+				"architecture": "Antigravity Agent SDK + Azure Serverless Functions + Event Grid",
+				"throughput": "Real-time telemetry evaluation loop",
+				"nodes": "Multi-region Azure Kubernetes Clusters",
+				"cloudProvider": "Microsoft Azure Cloud",
+				"costReduction": "29.6% net cloud expenditure reduction"
+			}
+		}
+	],
+	"certifications": [
+		{
+			"id": "cert-finops-fcp",
+			"sector": "CERTIFICATION",
+			"title": "FINOPS CERTIFIED PRACTITIONER (FCP)",
+			"description": "Mastery in multi-cloud financial operations, unit metrics, cost allocation, and rate optimization methodologies.",
+			"imageUrl": "",
+			"latLong": "",
+			"tags": ["FINOPS_FOUNDATION", "LINUX_FOUNDATION", "UNIT_ECONOMICS", "CLOUD_FINANCE"],
+			"glitchLabel": "FCP_VERIFIED",
+			"metrics": [],
+			"blueprintDetails": {
+				"architecture": "",
+				"throughput": "",
+				"nodes": "",
+				"cloudProvider": "",
+				"costReduction": ""
+			}
+		},
+		{
+			"id": "cert-az-305",
+			"sector": "CERTIFICATION",
+			"title": "AZURE SOLUTIONS ARCHITECT EXPERT (AZ-305)",
+			"description": "Advanced design authority for enterprise cloud infrastructure, high-availability microservices, and hybrid mesh governance.",
+			"imageUrl": "",
+			"latLong": "",
+			"tags": ["MICROSOFT_CERTIFIED", "AZ-305", "HYBRID_MESH", "SECURITY_ARCHITECTURE"],
+			"glitchLabel": "AZ305_EXPERT",
+			"metrics": [],
+			"blueprintDetails": {
+				"architecture": "",
+				"throughput": "",
+				"nodes": "",
+				"cloudProvider": "",
+				"costReduction": ""
+			}
+		},
+		{
+			"id": "cert-cka",
+			"sector": "CERTIFICATION",
+			"title": "CERTIFIED KUBERNETES ADMINISTRATOR (CKA)",
+			"description": "Cluster orchestration, ingress routing, storage volume isolation, and production cluster troubleshooting.",
+			"imageUrl": "",
+			"latLong": "",
+			"tags": ["CNCF", "KUBERNETES", "CONTAINER_ORCHESTRATION", "DEVOPS"],
+			"glitchLabel": "CKA_ADMIN",
+			"metrics": [],
+			"blueprintDetails": {
+				"architecture": "",
+				"throughput": "",
+				"nodes": "",
+				"cloudProvider": "",
+				"costReduction": ""
+			}
+		}
+	],
+	"conferences": [
+		{
+			"id": "conf-finops-express",
+			"sector": "KEYNOTE",
+			"title": "FINOPS X GLOBAL SUMMIT 2025",
+			"description": "Delivered keynote address on \"Architecting Autonomous Agentic FinOps in Hyperscale AI Environments\".",
+			"imageUrl": "",
+			"latLong": "SAN DIEGO, CA · JUNE 2025",
+			"tags": ["KEYNOTE_SPEAKER", "AI_FINOPS", "HYPERSCALE", "PUBLIC_SPEAKER"],
+			"glitchLabel": "KEYNOTE_2025",
+			"metrics": [],
+			"blueprintDetails": {
+				"architecture": "",
+				"throughput": "",
+				"nodes": "",
+				"cloudProvider": "",
+				"costReduction": ""
+			}
+		},
+		{
+			"id": "conf-msft-build",
+			"sector": "TECHNICAL_SESSION",
+			"title": "MICROSOFT BUILD 2025",
+			"description": "Presented real-time telemetry streaming architectures for million-node cloud fleets using Azure Event Hubs and PowerBI.",
+			"imageUrl": "",
+			"latLong": "SEATTLE, WA · MAY 2025",
+			"tags": ["MICROSOFT_BUILD", "CLOUD_TELEMETRY", "AZURE_EVENT_HUBS", "PANEL"],
+			"glitchLabel": "MSFT_BUILD",
+			"metrics": [],
+			"blueprintDetails": {
+				"architecture": "",
+				"throughput": "",
+				"nodes": "",
+				"cloudProvider": "",
+				"costReduction": ""
+			}
+		},
+		{
+			"id": "conf-kubecon",
+			"sector": "PANEL_DISCUSSION",
+			"title": "KUBECON + CLOUDNATIVECON 2024",
+			"description": "Co-hosted technical deep-dive panel on cost-efficient pod autoscaling and spot instance resilience in financial services.",
+			"imageUrl": "",
+			"latLong": "LONDON, UK · NOVEMBER 2024",
+			"tags": ["KUBECON", "CNCF_PANEL", "SPOT_INSTANCES", "COST_AUTOSCALING"],
+			"glitchLabel": "KUBECON_UK",
+			"metrics": [],
+			"blueprintDetails": {
+				"architecture": "",
+				"throughput": "",
+				"nodes": "",
+				"cloudProvider": "",
+				"costReduction": ""
+			}
+		}
+	]
+}

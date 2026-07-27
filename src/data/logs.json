@@ -1,0 +1,167 @@
+[
+  {
+    "id": "microsoft",
+    "company": "Microsoft",
+    "companySubtitle": "Full-time · 4 yrs 3 mos · On-site · Singapore",
+    "period": "MAY 2022 — PRESENT",
+    "role": "Head of Azure & AI Commercial Deals Finance",
+    "codeName": "MSFT_AZURE_AI_FINANCE",
+    "description": "Leading strategic financial engineering, commercial deal structuring, revenue & margin strategy, and cloud value management across Asia, Europe South, Middle East & Africa.",
+    "subRoles": [
+      {
+        "title": "Head of Azure & AI Commercial Deals Finance - Revenue & Margin Strategy (Asia & Europe South)",
+        "period": "Jan 2026 - Present · 7 mos",
+        "location": "Singapore",
+        "skills": ["Commercial", "Sales Management", "Revenue Strategy", "Margin Optimization", "Cloud Deals"]
+      },
+      {
+        "title": "Head of Cloud Strategy, AI Economics & Value Mgmt. (Asia, Middle East & Africa, Europe South)",
+        "period": "Aug 2025 - Present · 1 yr",
+        "location": "Singapore",
+        "skills": ["FinOps", "AI Business Value", "Cloud Strategy", "AI Economics", "Executive Advisory"]
+      },
+      {
+        "title": "Head of Cloud & AI Economics & Value Management (ASEAN & Asia), Azure Strategic Finance",
+        "period": "Sep 2024 - Jul 2025 · 11 mos",
+        "location": "Singapore",
+        "description": "Cloud Strategy and Advisory | Business Value Assessment | Cloud Economics | Cloud Cost Management | FinOps | Sustainability | AI Value Assessment & Investment",
+        "skills": ["Corporate Finance", "Computer Ethics", "Cloud Cost Management", "Sustainability", "AI Value Assessment"]
+      },
+      {
+        "title": "Cloud Strategy & Finance - Senior Finance Manager",
+        "period": "May 2022 - Sep 2024 · 2 yrs 5 mos",
+        "location": "Singapore",
+        "description": "Cloud Strategy and Advisory | Business Value Assessment | Cloud Economics | Cloud Cost Management | FinOps",
+        "skills": ["Cloud Strategy", "FinOps", "Financial Modeling", "Business Value Assessment"]
+      }
+    ],
+    "metrics": {
+      "projectsCompleted": "24+ Global Deals",
+      "impact": "Multi-Billion $ Margin",
+      "coreImprovements": "AI Economics & FinOps"
+    }
+  },
+  {
+    "id": "accenture-strategy",
+    "company": "Accenture Strategy & Consulting",
+    "companySubtitle": "Full-time · 3 yrs 11 mos · Singapore",
+    "period": "JUL 2018 — MAY 2022",
+    "role": "Engagement Manager · Business & Tech Strategy",
+    "codeName": "ACCENTURE_STRATEGY",
+    "description": "Advising leading institutions from diverse sectors in APAC and EMEA, designing and executing Business Strategies to unlock accelerated growth and profitability.",
+    "subRoles": [
+      {
+        "title": "Engagement Manager (Business & Tech Strategy, Growth Markets)",
+        "period": "Jun 2021 - May 2022 · 1 yr",
+        "location": "Singapore",
+        "description": "Solving challenging business problems and building pathways for sustained value creation & capture for strategic and financial success.",
+        "highlights": [
+          "Short-term market investigations & long-term analysis evaluating adjacent market opportunities, strategic priorities, and M&A.",
+          "New business development and operationalization.",
+          "Deep dive on current business mix & profitability, cost structures, portfolio analysis, go-to-market optimization, and financial planning.",
+          "Partnering with senior leadership teams to operationalize change and propagate data-driven decision making at all levels."
+        ],
+        "skills": ["Communication", "Business Strategy", "M&A Strategy", "Growth Markets"]
+      },
+      {
+        "title": "Junior Engagement Manager",
+        "period": "Jun 2020 - Jun 2021 · 1 yr 1 mo",
+        "location": "Singapore",
+        "skills": ["Business Strategy", "IT Strategy", "Leadership", "Cross-functional Teams"]
+      },
+      {
+        "title": "Senior Strategy Consultant (ASEAN / Growth Markets)",
+        "period": "Jul 2018 - Jun 2020 · 2 yrs",
+        "location": "Singapore",
+        "skills": ["Corporate Finance", "Business Growth Strategies", "Market Research", "Portfolio Optimization"]
+      }
+    ],
+    "metrics": {
+      "projectsCompleted": "18+ Engagements",
+      "impact": "Growth & Profitability",
+      "coreImprovements": "APAC & EMEA Strategy"
+    }
+  },
+  {
+    "id": "ey-parthenon",
+    "company": "EY-Parthenon",
+    "companySubtitle": "Part-time · 4 mos · New York",
+    "period": "MAY 2017 — AUG 2017",
+    "role": "Associate · Transaction Advisory / M&A Strategy",
+    "codeName": "EY_PARTHENON_MA",
+    "description": "Sell side and Buy side Transaction Analysis and Advisory; Deal Due Diligence for both Strategic and Financial (Private Equity) Acquirers across Health Care, TMT, Industrial / Heavy Machinery, and Financial Services.",
+    "subRoles": [
+      {
+        "title": "Associate (Transaction Advisory / M&A Strategy)",
+        "period": "May 2017 - Aug 2017 · 4 mos",
+        "location": "New York",
+        "highlights": [
+          "Sell side and Buy side Transaction Analysis and Advisory.",
+          "Deal Due Diligence for both Strategic and Financial (Private Equity) Acquirers.",
+          "Sectors: Health Care, TMT, Industrial / Heavy Machinery, Financial Services."
+        ],
+        "skills": ["Communication", "Business Strategy", "M&A Strategy", "Due Diligence"]
+      }
+    ],
+    "metrics": {
+      "projectsCompleted": "12+ M&A Deals",
+      "impact": "Buy/Sell Due Diligence",
+      "coreImprovements": "Healthcare, TMT & PE"
+    }
+  },
+  {
+    "id": "credit-suisse",
+    "company": "Credit Suisse",
+    "companySubtitle": "Full-time · 6 yrs 7 mos · Singapore",
+    "period": "FEB 2010 — AUG 2016",
+    "role": "Assistant Vice President · Investment Banking",
+    "codeName": "CREDIT_SUISSE_IB",
+    "description": "Senior Business Analyst and Project Manager driving Legal Entity Restructuring and Front Office Derivatives Infrastructure.",
+    "subRoles": [
+      {
+        "title": "Assistant Vice President",
+        "period": "Sep 2013 - Aug 2016 · 3 yrs",
+        "location": "Singapore",
+        "description": "Senior Business Analyst and Project Manager (Legal Entity Restructuring).",
+        "highlights": [
+          "Led Strategy design, strategic Program Execution and delivery to effect Strategic Change, New Business enablement, Go-to-Market (GTM), Operational Change & Improvements, Regulatory Compliance and Risk Management for Group Investment Banking."
+        ],
+        "skills": ["Communication", "Business Strategy", "Legal Entity Restructuring", "Risk Management"]
+      },
+      {
+        "title": "Business Analyst",
+        "period": "Feb 2010 - Aug 2013 · 3 yrs 7 mos",
+        "location": "Singapore",
+        "description": "Strategic Derivatives Infrastructure Initiative (Front Office Cash Sourcing).",
+        "skills": ["Communication", "Finance", "Derivatives Infrastructure", "Cash Sourcing"]
+      }
+    ],
+    "metrics": {
+      "projectsCompleted": "15+ IB Programs",
+      "impact": "Group Restructuring",
+      "coreImprovements": "Front Office Cash Sourcing"
+    }
+  },
+  {
+    "id": "accenture-ba",
+    "company": "Accenture",
+    "companySubtitle": "Full-time · 8 mos · Singapore",
+    "period": "JUN 2009 — JAN 2010",
+    "role": "Business Analyst · Financial Systems",
+    "codeName": "ACCENTURE_BA",
+    "description": "Financial analysis, systems requirements modeling, and business process optimization for enterprise financial services clients.",
+    "subRoles": [
+      {
+        "title": "Business Analyst",
+        "period": "Jun 2009 - Jan 2010 · 8 mos",
+        "location": "Singapore",
+        "skills": ["Communication", "Finance", "Systems Analysis", "Process Engineering"]
+      }
+    ],
+    "metrics": {
+      "projectsCompleted": "4+ Systems Deployments",
+      "impact": "Financial Systems",
+      "coreImprovements": "Client Operations"
+    }
+  }
+]
