@@ -1,4 +1,17 @@
 import React from 'react';
+// Provide minimal JSX typings fallback when @types/react isn't installed
+// This avoids TS errors like: "JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists."
+// and "Could not find a declaration file for module 'react/jsx-runtime'".
+// These declarations are scoped to this module file to avoid affecting other files.
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
+declare module 'react/jsx-runtime';
 import { ProjectRelease } from '../types';
 import { X, Cpu, Server, ShieldCheck, Zap, Layers, CheckCircle2, Cloud } from 'lucide-react';
 
