@@ -94,10 +94,10 @@ export const TextDecoder: React.FC<TextDecoderProps> = ({
 		};
 
 		if (typeof window !== "undefined" && document.readyState === "complete") {
-			timeoutRef.current = window.setTimeout(beginAnimation, startDelayMs);
+			timeoutRef.current = setTimeout(beginAnimation, startDelayMs);
 		} else {
 			const handleLoad = () => {
-				timeoutRef.current = window.setTimeout(beginAnimation, startDelayMs);
+				timeoutRef.current = setTimeout(beginAnimation, startDelayMs);
 			};
 			window.addEventListener("load", handleLoad, { once: true });
 			return () => {
