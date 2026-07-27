@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vipingcode.github.io/sitemap.xml
