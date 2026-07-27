@@ -31,8 +31,8 @@ export const TextDecoder: React.FC<TextDecoderProps> = ({
 }) => {
 	const [displayText, setDisplayText] = useState("");
 	const [isDecoding, setIsDecoding] = useState(false);
-	const intervalRef = useRef<NodeJS.Timeout | null>(null);
-	const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+	const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+	const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 	const shouldReduceMotion =
 		disableAnimation ||
 		(typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
