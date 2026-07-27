@@ -15,7 +15,7 @@ import { StudioBackground } from './components/StudioBackground';
 import { ProjectRelease } from './types';
 
 export default function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedProject, setSelectedProject] = useState<ProjectRelease | null>(null);
   const [telemetryOpen, setTelemetryOpen] = useState(false);
 

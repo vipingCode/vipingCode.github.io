@@ -87,6 +87,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTerminal, onOpen
 								loop
 								muted
 								playsInline
+								preload='auto'
 							/>
 						</div>
 					</div>
