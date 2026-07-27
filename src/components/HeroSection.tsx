@@ -30,11 +30,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTerminal, onOpen
 					</div>
 
 					{/* Main Title with Reveal & Glow Effect */}
-					<h1 className='text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 text-[var(--text-primary)] leading-[1.02] sm:leading-[0.95] break-words sm:break-normal'>
-						<span className='text-[var(--text-primary)] block font-black tracking-tighter title-reveal-glow'>
+					<h1 className='font-black tracking-tighter mb-6 text-[var(--text-primary)] leading-[1.02] sm:leading-[0.95]'>
+						<span className='text-[var(--text-primary)] block font-black tracking-tighter title-reveal-glow whitespace-nowrap text-[2.2rem] sm:text-6xl md:text-7xl lg:text-8xl'>
 							VIPIN GUPTA
 						</span>
-						<span className='block mt-2 font-black text-2xl sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap overflow-visible'>
+						<span className='mt-2 block font-black text-[1.55rem] sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap overflow-visible'>
 							<RotatingTextDecoder
 								roles={["Cloud Engineer", "Cloud Architect", "Cloud Finance", "Cloud Strategy"]}
 								scrambleSpeed={40}
@@ -47,15 +47,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTerminal, onOpen
 
 					{/* Headline Subtitle */}
 					<p className='text-lg sm:text-2xl md:text-3xl max-w-2xl text-[var(--text-secondary)] font-normal leading-snug tracking-tight mb-8 sm:mb-10'>
-						<TextDecoder
-							key={`desc-${decoderSeed}`}
-							text='Engineering precision at the intersection of finance and cloud infrastructure.'
-							scrambleSpeed={10}
-							iterationsPerChar={1}
-							autoStart={true}
-							triggerOnHover={false}
-							className='text-[var(--text-secondary)]'
-						/>
+						<span className='text-[var(--text-secondary)]'>
+							Engineering precision at the intersection of finance and cloud infrastructure.
+						</span>
 					</p>
 
 					{/* Action Buttons (Latency & Decode Reinit hidden on mobile view) */}

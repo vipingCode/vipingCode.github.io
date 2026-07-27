@@ -18,8 +18,7 @@ export const RotatingTextDecoder: React.FC<RotatingTextDecoderProps> = ({
 }) => {
 	const [index, setIndex] = useState(0);
 	const shouldReduceMotion =
-		typeof window !== "undefined" &&
-		(window.matchMedia("(prefers-reduced-motion: reduce)").matches || window.innerWidth < 768);
+		typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 	const handleComplete = () => {
 		const timer = setTimeout(() => {
