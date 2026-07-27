@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TextDecoder } from "./TextDecoder";
 
 interface RotatingTextDecoderProps {
@@ -17,8 +17,16 @@ export const RotatingTextDecoder: React.FC<RotatingTextDecoderProps> = ({
 	className = "",
 }) => {
 	const [index, setIndex] = useState(0);
+	const [isInitial, setIsInitial] = useState(true);
 	const shouldReduceMotion =
 		typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+	useEffect(() => {
+		if (!isInitial) {
+			return;
+		}
+		setIsInitial(false);
+	}, []);
 
 	const handleComplete = () => {
 		const timer = setTimeout(() => {
@@ -39,7 +47,7 @@ export const RotatingTextDecoder: React.FC<RotatingTextDecoderProps> = ({
 				onComplete={handleComplete}
 				className='whitespace-nowrap'
 				disableAnimation={shouldReduceMotion}
-				startDelayMs={900}
+				startDelayMs={isInitial ? 900 : 0}
 			/>
 		</span>
 	);
