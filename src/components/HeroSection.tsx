@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { TextDecoder } from "./TextDecoder";
 import { RotatingTextDecoder } from "./RotatingTextDecoder";
 import { ArrowRight, Cpu, Zap, Activity, Play, Terminal } from "lucide-react";
+import heroVideoSrc from "../../assets/heroVideo.mp4";
 
 interface HeroSectionProps {
 	onOpenTerminal: () => void;
@@ -10,6 +11,29 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTerminal, onOpenTelemetry }) => {
 	const [decoderSeed, setDecoderSeed] = useState(0);
+	const videoRef = useRef<HTMLVideoElement>(null);
+
+	useEffect(() => {
+		const video = videoRef.current;
+		if (!video) return;
+
+		video.muted = true;
+		video.defaultMuted = true;
+		video.playsInline = true;
+
+		const startPlayback = () => {
+			// Some browsers defer muted autoplay until enough media has buffered.
+			void video.play().catch(() => {
+				// Playback will be retried by the browser when its autoplay policy permits it.
+			});
+		};
+
+		video.addEventListener("canplay", startPlayback);
+		video.load();
+		startPlayback();
+
+		return () => video.removeEventListener("canplay", startPlayback);
+	}, []);
 
 	return (
 		<section className='relative w-full min-h-screen flex flex-col justify-center px-4 sm:px-8 md:px-16 pt-24 md:pt-28 pb-16 overflow-hidden'>
@@ -81,11 +105,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTerminal, onOpen
 						{/* Blended Video Mask Container */}
 						<div className='relative w-full h-full video-blended-mask flex items-center justify-center pointer-events-none overflow-hidden'>
 							<video
+								ref={videoRef}
 								className='w-full h-full object-cover scale-110 opacity-95 pointer-events-none hero-video-element'
-								src='/assets/heroVideo.mp4'
+								src={heroVideoSrc}
 								autoPlay
 								loop
 								muted
+								defaultMuted
 								playsInline
 								preload='auto'
 							/>

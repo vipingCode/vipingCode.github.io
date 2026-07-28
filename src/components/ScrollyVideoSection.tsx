@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import scrollyVideoSrc from "../../assets/scrollyVideo.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,61 +154,68 @@ export const ScrollyVideoSection: React.FC = () => {
     const section = sectionRef.current;
     if (!section) return;
 
-    if (bgVideo) {
-      bgVideo.muted = true;
-      bgVideo.playsInline = true;
-    }
+    let seekFrameId: number | null = null;
+    let scrollProgress = 0;
 
-    let targetTime = 0;
-    let rafId: number;
+    const seekToScrollPosition = () => {
+      if (!bgVideo || !Number.isFinite(bgVideo.duration) || bgVideo.duration <= 0) return;
 
-    const handleLoaded = () => {
+      const targetTime = Math.min(scrollProgress * bgVideo.duration, Math.max(0, bgVideo.duration - 0.01));
+      // Avoid flooding mobile browsers with overlapping seeks while the user scrolls.
+      if (Math.abs(targetTime - bgVideo.currentTime) >= 0.016) {
+        bgVideo.currentTime = targetTime;
+      }
+    };
+
+    const queueSeek = () => {
+      if (seekFrameId !== null) return;
+
+      seekFrameId = requestAnimationFrame(() => {
+        seekFrameId = null;
+        seekToScrollPosition();
+      });
+    };
+
+    const handleMetadataLoaded = () => {
       ScrollTrigger.refresh();
+      queueSeek();
     };
 
     if (bgVideo) {
       bgVideo.muted = true;
+      bgVideo.defaultMuted = true;
       bgVideo.playsInline = true;
       if (bgVideo.readyState >= 1) {
-        handleLoaded();
+        handleMetadataLoaded();
       } else {
-        bgVideo.addEventListener("loadedmetadata", handleLoaded);
+        bgVideo.addEventListener("loadedmetadata", handleMetadataLoaded, { once: true });
       }
+      // Make the fetch explicit so scroll-position updates are never waiting on lazy media loading.
+      bgVideo.load();
     }
-
-    // Smooth lerp frame scrubbing loop for background video
-    const updateVideoFrame = () => {
-      if (bgVideo && bgVideo.duration && !isNaN(bgVideo.duration) && bgVideo.duration > 0 && bgVideo.readyState >= 1) {
-        const deltaBg = targetTime - bgVideo.currentTime;
-        if (Math.abs(deltaBg) > 0.0005) {
-          bgVideo.currentTime += deltaBg * 0.25;
-        }
-      }
-      rafId = requestAnimationFrame(updateVideoFrame);
-    };
-
-    rafId = requestAnimationFrame(updateVideoFrame);
 
     // Bind GSAP ScrollTrigger across the full height of sectionRef
     const st = ScrollTrigger.create({
       trigger: section,
       start: "top top",
       end: "bottom bottom",
-      scrub: true,
+      // A short scrub window provides smooth motion without the rAF seek loop that stutters on mobile.
+      scrub: 0.15,
       onUpdate: (self) => {
-        const dur = bgVideo?.duration;
-        if (dur && !isNaN(dur) && dur > 0) {
-          targetTime = self.progress * dur;
-        }
+        scrollProgress = self.progress;
+        queueSeek();
       }
     });
+
+    ScrollTrigger.refresh();
+    queueSeek();
 
     return () => {
       st.kill();
       if (bgVideo) {
-        bgVideo.removeEventListener("loadedmetadata", handleLoaded);
+        bgVideo.removeEventListener("loadedmetadata", handleMetadataLoaded);
       }
-      cancelAnimationFrame(rafId);
+      if (seekFrameId !== null) cancelAnimationFrame(seekFrameId);
     };
   }, []);
 
@@ -229,15 +237,16 @@ export const ScrollyVideoSection: React.FC = () => {
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
           <video
             ref={bgVideoRef}
-            src="/assets/scrollyVideo.mp4"
-            className="w-full h-full object-cover scale-105 blur-2xl opacity-40 dark:opacity-50 scrolly-video-element pointer-events-none"
+            src={scrollyVideoSrc}
+            className="w-full h-full object-cover scale-105 blur-xl sm:blur-2xl opacity-55 sm:opacity-40 dark:opacity-60 sm:dark:opacity-50 scrolly-video-element pointer-events-none"
             muted
+            defaultMuted
             playsInline
             preload="auto"
             disableRemotePlayback
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)] opacity-85" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)] opacity-85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)] opacity-65 sm:opacity-85" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)] opacity-65 sm:opacity-85" />
         </div>
 
       </div>
