@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
-import { Sidebar } from "./components/Sidebar";
 import { HeroSection } from "./components/HeroSection";
 import { ScrollyVideoSection } from "./components/ScrollyVideoSection";
 import { ThoughtsSection } from "./components/ThoughtsSection";
@@ -50,11 +49,8 @@ export default function App() {
 				onOpenTelemetry={() => setTelemetryOpen(true)}
 			/>
 
-			{/* Vertical Rail Sidebar */}
-			<Sidebar onOpenTerminal={scrollToContact} onOpenTelemetry={() => setTelemetryOpen(true)} />
-
-			{/* Main Content (Offset on XL screens for Sidebar) */}
-			<main className='ml-0 xl:ml-20 transition-all duration-300'>
+			{/* Main Content */}
+			<main>
 				{/* Hero Section with Live Text Decoder */}
 				<div id='hero'>
 					<HeroSection onOpenTerminal={scrollToContact} onOpenTelemetry={() => setTelemetryOpen(true)} />
