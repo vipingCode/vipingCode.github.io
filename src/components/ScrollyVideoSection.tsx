@@ -115,6 +115,7 @@ const StoryCard: React.FC<StoryCardProps> = ({ index, title, year, subtitle, des
 		<motion.div
 			ref={ref}
 			style={{ opacity, y, scale }}
+			data-slide={`${code}`}
 			className='w-full bg-white/95 dark:bg-zinc-950/95 border border-zinc-900/20 dark:border-zinc-100/20 shadow-xl dark:shadow-2xl p-6 sm:p-8 md:p-10 font-mono-tech relative overflow-hidden transition-colors duration-500 rounded-sm'>
 			{/* Top Brutalist Metadata Header */}
 			<div className='flex items-center justify-between text-[10px] sm:text-xs font-bold tracking-widest text-zinc-500 dark:text-zinc-400 uppercase pb-3 border-b border-zinc-900/15 dark:border-zinc-100/15 mb-6'>
