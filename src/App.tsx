@@ -11,6 +11,7 @@ import { CursorTrail } from "./components/CursorTrail";
 import { BlueprintModal } from "./components/BlueprintModal";
 import { LiveTelemetryWidget } from "./components/LiveTelemetryWidget";
 import { StudioBackground } from "./components/StudioBackground";
+import { SeoHead } from "./components/SeoHead";
 import { ProjectRelease } from "./types";
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
 
 	return (
 		<div className='min-h-screen relative text-[var(--text-primary)] selection:bg-[var(--card-border)]'>
+			<SeoHead />
 			{/* Studio Lighting Background & Floor Shadow */}
 			<StudioBackground />
 
