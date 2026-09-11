@@ -24,7 +24,6 @@
 
 	--nav-bg: rgba(255, 255, 255, 0.4);
 	--nav-border: rgba(255, 255, 255, 0.6);
-	--sidebar-bg: rgba(255, 255, 255, 0.35);
 	--tech-label-bg: #0f172a;
 	--tech-label-text: #ffffff;
 	--btn-main-bg: #0f172a;
@@ -53,7 +52,6 @@
 
 	--nav-bg: rgba(15, 20, 24, 0.85);
 	--nav-border: rgba(255, 255, 255, 0.12);
-	--sidebar-bg: rgba(15, 20, 24, 0.85);
 	--tech-label-bg: #000000;
 	--tech-label-text: #ffffff;
 	--btn-main-bg: #ffffff;
@@ -197,15 +195,6 @@ input:checked + .slider .knob {
 .theme-nav {
 	background: var(--nav-bg);
 	border-color: var(--nav-border);
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
-	box-shadow: var(--card-shadow);
-	transition: all 0.4s ease;
-}
-
-.theme-sidebar {
-	background: var(--sidebar-bg);
-	border-color: var(--subtle-border);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	box-shadow: var(--card-shadow);
